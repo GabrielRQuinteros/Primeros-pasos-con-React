@@ -1,14 +1,19 @@
-import { useState } from "react";
+import GifItem from "../GifItem/GifItem";
+import useFetchGifs from "../../hooks/useFetchGifs";
 
 const GifGrid = ( { category } : { category: string } ) => {
-  
-    const [ counter, setCounter ] = useState( 0 );
 
+    const { images, isLoading } = useFetchGifs(category);
+    console.log( images, isLoading );
     return (
         <>
             <h3>{category}</h3>
-            <h5>{counter}</h5>
-            <button onClick={ () => setCounter( counter + 1) } >+1</button>
+            
+            { isLoading && (<h2>Cargando ...</h2>) }
+            
+            <div className="card-grid" >
+                { images.map( ({ id, title, url }) => <GifItem key={id} title={title} url={url}/> ) }
+            </div>
         </>
     );
 }
