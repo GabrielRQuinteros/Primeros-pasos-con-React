@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas del componente: <GifItem/> 1- Renderizacion del Componente con parametros correctos 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="One punch Man Test"
+      src="https://alfabetajuega.com/hero/2025/05/saitama.1746780301.4579.jpg?width=1200&aspect_ratio=16:9"
+    />
+    <p>
+      One punch Man Test
+    </p>
+  </div>
+</div>
+`;

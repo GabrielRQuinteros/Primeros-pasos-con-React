@@ -13,7 +13,7 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx", /// Necesario para Jest + Ts
 
     /* Linting */
     "strict": true,
@@ -21,7 +21,9 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+     "types": ["@testing-library/jest-dom"] /// Necesario para Jest + Ts
   },
-  "include": ["src"]
+  "include": ["src", "global.d.ts", "jest.setup.ts"] /// Necesario para Jest + Ts
 }
