@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas del componente <GifApp/> 1-Test-Se prueba que se renderice el componente. 1`] = `
+<div>
+  <h1>
+    Aplicación de Gifs
+  </h1>
+  <form
+    aria-label="form"
+  >
+    <input
+      id="inputCategoria"
+      placeholder="Buscar Categoría"
+      type="text"
+      value=""
+    />
+  </form>
+  <ol>
+    <h3>
+      One Punch Man
+    </h3>
+    <h2>
+      Cargando ...
+    </h2>
+    <div
+      class="card-grid"
+    />
+    <h3>
+      Dragon Ball
+    </h3>
+    <h2>
+      Cargando ...
+    </h2>
+    <div
+      class="card-grid"
+    />
+  </ol>
+</div>
+`;

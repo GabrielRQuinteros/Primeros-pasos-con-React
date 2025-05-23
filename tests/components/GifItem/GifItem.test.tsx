@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import GifItem from '../../../src/components/GifItem/GifItem';
 
 describe('Pruebas del componente: <GifItem/>', () => {
@@ -9,6 +9,13 @@ describe('Pruebas del componente: <GifItem/>', () => {
     test('1- Renderizacion del Componente con parametros correctos', () => {
         const { container } = render( <GifItem title={title} url={url}/> );
         expect( container ).toMatchSnapshot();
+    });
+
+    test('2- Debe mostrar la imagen con el URL y el Alt indicado', () => {
+        render( <GifItem title={title} url={url}/> );
+        const imageElement: HTMLImageElement = screen.getByRole('img');
+        expect( imageElement.src ).toBe(url);
+        expect( imageElement.alt ).toBe(title);
     });
 
     

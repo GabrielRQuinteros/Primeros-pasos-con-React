@@ -25,7 +25,7 @@ const AddCategory = (
     /// //////////////////////////////////////////////////////////////////////
 
     return (
-        <form onSubmit= { onSubmit }>
+        <form onSubmit= { onSubmit } aria-label='form'>
 
             <input  id="inputCategoria"
                     type="text"

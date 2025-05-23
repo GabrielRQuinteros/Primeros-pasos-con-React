@@ -2,7 +2,7 @@ import { useState } from "react"
 import AddCategory from "../components/AddCategory/AddCategory";
 import GifGrid from "../components/GifGrid/GifGrid";
 
-const GifApp = () => {
+export const GifApp = () => {
     const [categories, setCategories] = useState(['One Punch Man', 'Dragon Ball']);
     const onAddCategory = ( newCategory: string ) => {
         if( categories.includes( newCategory ) )
@@ -21,7 +21,6 @@ const GifApp = () => {
                         onNewValue={ onAddCategory }
                           />
         {/* listado de gifs */}
-
         <ol>
             {  categories.map( ( cat ) => ( <GifGrid category={cat} key={cat}/>)) }
         </ol>
